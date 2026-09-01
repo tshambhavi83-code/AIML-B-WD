@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Defined object in js </title>
+    
+</head>
+
+<body>
+    <script>
+        let student = {
+            First : "Shambhavi",
+            Last : "Tripathi",
+            city : "ghaziabad",
+            pincode: 201009,
+             
+            salary : function()
+            {
+                document.write("salary");
+            },
+
+            subject : ["web dev", "c++", "java"]
+        };
+
+        console.log(student.First);
+        console.log(student.Last);
+        student.salary();
+       console.log(student.subject[0]);
+        console.log(student.subject[1]);
+
+        
+
+
+    </script>
+    
+</body>
+</html>
