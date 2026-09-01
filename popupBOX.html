@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP UP BOX IN JS </title>
+
+    <script>
+        function Sum()
+        {
+            let age = parseInt(prompt ("enter value of a"));  //prompt is used to take input from user
+
+            if (age>=18)
+        {
+            let c = confirm("Do you want to submit your response");
+            if (c)
+        {
+            alert("your response is submitted");
+        }
+        else{
+            alert("Thankyou!");
+        }
+        }
+        else 
+        {
+            alert("you are not eligible");
+        }
+        }
+    </script>
+</head>
+<body>
+
+    <input type="button" onclick="Sum()" value="Result">
+    
+</body>
+</html>
