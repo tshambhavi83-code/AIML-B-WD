@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+<script>
+     
+     class student 
+     {
+        static count =0;
+        constructor(name,rollno,marks)
+        {
+            this.name = name
+            this.marks=marks
+            this.rollno=rollno
+
+            student.count ++;
+        }
+
+        displayResult() {
+            console.log("rollno:" + this.rollno);
+            console.log("name:" + this.name);
+            console.log("marks:" + this.marks);
+
+            if(this.marks>= 35)
+        {
+            console.log("pass");
+        }
+        else 
+        {
+            console.log("fail");
+        }
+
+        console.log("-----------------");
+
+        }
+     }
+
+     let s1 = new student("rahul", 101, 45);
+     let s2 = new student("priya", 102, 23);
+     let s3 = new student("sneha", 103, 98);
+
+     s1.displayResult();
+     s2.displayResult();
+     s3.displayResult();
+
+     console.log(student.count);
+
+</script>
+<body>
+    
+</body>
+</html>
