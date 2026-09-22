@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank account management system</title>
+</head>
+<script>
+    class BankAccount {
+    constructor(accountNo, holderName, balance) {
+        this.accountNo = accountNo;
+        this.holderName = holderName;
+        this.balance = balance;
+    }
+
+    deposit(amount) {
+        this.balance += amount;
+        console.log(`₹${amount} deposited successfully.`);
+    }
+
+
+    withdraw(amount) {
+        if (amount > this.balance) {
+            console.log("Insufficient balance. Withdrawal not allowed.");
+        } else {
+            this.balance -= amount;
+            console.log(`₹${amount} withdrawn successfully.`);
+        }
+    }
+
+    
+    displayBalance() {
+        console.log(`Account No: ${this.accountNo}`);
+        console.log(`Holder Name: ${this.holderName}`);
+        console.log(`Current Balance: ₹${this.balance}`);
+        
+    }
+
+    static bankInfo() {
+        console.log("bank name: ABC bank");
+        console.log("general information");
+        console.log("savings and current accounts available");
+    
+    }
+}
+    BankAccount.bankInfo();
+
+
+let account1 = new BankAccount(1001, "Rahul", 10000);
+let account2 = new BankAccount(1002, "Priya", 5000);
+console.log("Account 1 Transactions:");
+account1.deposit(2000);
+account1.withdraw(3000);
+account1.displayBalance();
+console.log("Account 2 Transactions:");
+account2.deposit(1000);
+account2.withdraw(7000);
+account2.withdraw(2000);
+account2.displayBalance();
+</script>
+<body>  
+</body>
+</html>
